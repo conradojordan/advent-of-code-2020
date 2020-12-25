@@ -1,4 +1,4 @@
-from os import path
+import os
 import itertools
 from typing import List, Tuple
 
@@ -11,7 +11,7 @@ def solve(entries: List[int], combination_size) -> Tuple:
 
 
 if __name__ == "__main__":
-    file_path = path.join("..", "inputs", "day1.txt")
+    file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "inputs", "day1.txt")
 
     with open(file_path) as f:
         entries = [int(entry) for entry in f.read().strip().split()]
